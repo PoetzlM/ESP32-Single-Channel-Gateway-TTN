@@ -1,0 +1,82 @@
+menu "MQTT-Project Configuration"
+
+	config WIFI_HOSTNAME
+		string "WiFi Hostname"
+		default "ESPClient"
+		help
+			Hostname of WiFi Client (ESP32)
+			
+			
+	config WIFI_SSID
+		string "WiFi SSID"
+		default "o2-WLAN54"
+		help
+			SSID of WiFi Network
+			
+			
+	config WIFI_PASSWORD
+		string "WiFi Password"
+		default "KillerLoop31415"
+		help
+			Password of WiFi Network
+			
+			
+	config BROKER_IP
+		string "Broker IP"
+		default "192.168.1.49"
+		help
+			IPv4 of the broker to connect to
+			
+			
+	config BROKER_PORT
+		int "Broker Port"
+		default 8884
+		help
+			Port of the broker to connect to over mqtt
+			
+	config MQTT_BROKER_USER
+		string "MQTT Broker Username"
+		default "mpo"
+		help
+			Username of MQTT Broker (leave blank if no credentials used)
+			
+	config MQTT_BROKER_PASSWORD
+		string "MQTT Broker Password"
+		default "mpo"
+		help
+			Password of MQTT Broker (leave blank if no credentials used)
+			
+endmenu
+
+
+menu "TTN Device Config"
+
+	config TTN_DEVEUI
+		string "TTN_DEVEUI"
+		default "70B3D57ED0048A25"
+		help
+			DEV-EUI
+			
+			
+	config TTN_APIEUI
+		string "TTN_APIEUI"
+		default "0000000000000000"
+		help
+			API-EUI
+
+	config TTN_APPKEY
+		string "TTN_APPKEY"
+		default "8AEB31B0A6F84886F93B57C0C8004B4B"
+		help
+			APP-KEY
+			
+#	config TTN_API-KEY
+#		string "TTN_APPKEY"
+#		default "NNSXS.3MXJZD4AMRXC7FS5GP2YYFFRVDUN2PR6O2V2YRA.XVQAREPWZWP4POS3QKITI5YA7SZ75H4R24IVNGXVFFHE4K3EAIGA"
+#		help
+#			TTN_API-KEY
+
+endmenu
+
+
+
