@@ -9,11 +9,16 @@ Simple single channel gatway for the esp32. Threadsafe and interrupt safe functi
 - Uses UDP Semtech protocol
 - compiled binarys are available
 - Up and downstream messages
-  
+- Supported SF7-12
+
+
 **Open topics**
 
 - readable documentation (documentation atm only in code)
 - only tmst property is used of the semtech protocoll
+- DNS support for server lookup
+- FSK Modulation
+
 
 **Used libs:**
 
