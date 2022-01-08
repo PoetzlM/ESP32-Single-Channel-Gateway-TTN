@@ -435,10 +435,12 @@ void TtnGWSerialUiConfig::getNewConfig()
     Serial.println(altitude);
     storedData.altitude = altitude;
 
+    storedData.storageVersion = STRUCT_STORAGE_VERSION;
+	
     updateChecksum();
 
     Serial.println("write to flash");
-    storedData.storageVersion = STRUCT_STORAGE_VERSION;
+
     EEPROM.put(0, storedData);
     EEPROM.end();
 }
